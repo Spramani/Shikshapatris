@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shikshapatri — Divine Code of Conduct | Official Companion</title>
+    <meta name="description" content="Embark on a divine spiritual journey with the Shikshapatri companion app. Read all 212 sacred Sanskrit shlokas by Bhagwan Swaminarayan with Gujarati, Hindi & English translations and audio chanting.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="icon" type="image/png" href="assets/app_icon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sacred Sunburst Rays Background (Matching Mobile Loading Screen) -->
+    <div class="sacred-sunburst-bg" aria-hidden="true"></div>
+    <div class="bg-glow"></div>
+    
+    <!-- Floating Golden & Saffron Embers Canvas -->
+    <canvas id="embersCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-badge">
+                    <img src="assets/app_icon.png" alt="Shikshapatri Logo">
+                </div>
+                <span>Shikshapatri</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#artworks">Sacred Art</a>
+                <a href="#shloka-preview">Live Reader</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Switch Theme">☀️</button>
+                <a href="#download" class="btn-primary-small">Get the App</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (BhaktiQuest Style 3D Mockup & Floating Badges) -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="badge">
+                    <i data-lucide="sparkles" class="gold-icon" style="width: 16px; height: 16px;"></i>
+                    ॥ શ્રીસ્વામિનારાયણો વિજયતે ॥
+                </span>
+                <h1>Your Path to <br><span class="text-gold">Spiritual Purity</span></h1>
+                <p>Read all 212 sacred Sanskrit shlokas composed by Bhagwan Swaminarayan. Available completely offline with authentic Gujarati, Hindi &amp; English translations, word-by-word audio chanting, and elegant poster sharing.</p>
+                <div class="hero-cta">
+                    <a href="#download" class="btn-primary">
+                        <i data-lucide="apple"></i>
+                        Download for iOS
+                    </a>
+                    <a href="#download" class="btn-secondary">
+                        <i data-lucide="play"></i>
+                        Google Play
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3D Perspective Hero Mockup with Real App Screenshot -->
+            <div class="hero-mockup">
+                <div class="phone-frame">
+                    <img src="assets/app_mockup_home.png" alt="Shikshapatri App Home Screen" class="mockup-img">
+                </div>
+                
+                <!-- Floating Glass Badges -->
+                <div class="floating-badge badge-1">
+                    <i data-lucide="flame" class="gold-icon"></i>
+                    <span>Daily Niyam</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <i data-lucide="book-open" class="gold-icon"></i>
+                    <span>212 Shlokas</span>
+                </div>
+                <div class="floating-badge badge-3">
+                    <i data-lucide="volume-2" class="gold-icon"></i>
+                    <span>Audio Chanting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (Matching BhaktiQuest) -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>Divine <span class="text-gold">Features</span></h2>
+            <p>Everything you need for a daily sacred contemplation practice, beautifully crafted in one companion app.</p>
+        </div>
+        
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i data-lucide="sun" class="feature-icon"></i>
+                </div>
+                <h3>Shloka of the Day</h3>
+                <p>Begin every morning with an auspicious Sanskrit verse, contextual reflection, and daily spiritual contemplation.</p>
+                <img src="assets/app_mockup_home.png" alt="Shloka of the Day" class="feature-mockup" style="max-height: 260px; object-fit: cover; object-position: top;">
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i data-lucide="headphones" class="feature-icon"></i>
+                </div>
+                <h3>Sacred Audio Chanting</h3>
+                <p>Listen to authentic Sanskrit meter and verse translations with word-by-word highlights in Gujarati, Hindi, and English.</p>
+                <img src="assets/chapter_1.jpg" alt="Audio Chanting Feature" class="feature-mockup" style="max-height: 260px; object-fit: cover;">
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i data-lucide="share-2" class="feature-icon"></i>
+                </div>
+                <h3>Sacred Poster Generator</h3>
+                <p>Create high-resolution devotional card graphics adorned with traditional gold filigree borders for WhatsApp &amp; Instagram Stories.</p>
+                <img src="assets/chapter_2.jpg" alt="Poster Sharing Feature" class="feature-mockup" style="max-height: 260px; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Original Chapter Artworks Gallery (Uploaded Artwork) -->
+    <section id="artworks" class="chapter-artwork-section">
+        <div class="section-header">
+            <h2>Canonical <span class="text-gold">Chapters</span></h2>
+            <p>Experience the divine narrative of Bhagwan Swaminarayan imparting eternal wisdom through custom sacred illustrations.</p>
+        </div>
+
+        <div class="artwork-gallery-grid">
+            <!-- Chapter 1 -->
+            <div class="artwork-card" data-target-shloka="1">
+                <div class="artwork-image-container">
+                    <span class="artwork-overlay-badge">Chapter 1</span>
+                    <span class="artwork-overlay-verses">Shlokas 1 – 10</span>
+                    <img src="assets/chapter_1.jpg" alt="Chapter 1 Introduction" class="artwork-img">
+                </div>
+                <div class="artwork-content">
+                    <h3>Prastavana &amp; Meditation</h3>
+                    <p>Bhagwan Swaminarayan in sacred assembly at Vadtal, invoking Lord Shri Krishna and Radhika before delivering the moral code.</p>
+                </div>
+            </div>
+
+            <!-- Chapter 2 -->
+            <div class="artwork-card" data-target-shloka="11">
+                <div class="artwork-image-container">
+                    <span class="artwork-overlay-badge">Chapter 2</span>
+                    <span class="artwork-overlay-verses">Shlokas 11 – 122</span>
+                    <img src="assets/chapter_2.jpg" alt="Chapter 2 Common Code" class="artwork-img">
+                </div>
+                <div class="artwork-content">
+                    <h3>General Codes of Conduct</h3>
+                    <p>Universal moral foundation for all spiritual aspirants: non-violence, truthfulness, integrity, and reverence for holy places.</p>
+                </div>
+            </div>
+
+            <!-- Chapter 3 -->
+            <div class="artwork-card" data-target-shloka="123">
+                <div class="artwork-image-container">
+                    <span class="artwork-overlay-badge">Chapter 3</span>
+                    <span class="artwork-overlay-verses">Shlokas 123 – 132</span>
+                    <img src="assets/chapter_3.jpg" alt="Chapter 3 Special Duties of Acharyas" class="artwork-img">
+                </div>
+                <div class="artwork-content">
+                    <h3>Special Duties of Acharyas</h3>
+                    <p>Spiritual guidance for lineage leaders: nurturing righteous conduct, mastering senses, and selflessly guiding devotees.</p>
+                </div>
+            </div>
+
+            <!-- Chapter 4 -->
+            <div class="artwork-card" data-target-shloka="135">
+                <div class="artwork-image-container">
+                    <span class="artwork-overlay-badge">Chapter 4</span>
+                    <span class="artwork-overlay-verses">Shlokas 133 – 134</span>
+                    <img src="assets/chapter_4.jpg" alt="Chapter 4 Duties of Acharyas' Wives" class="artwork-img">
+                </div>
+                <div class="artwork-content">
+                    <h3>Duties of Acharyas' Wives</h3>
+                    <p>Exemplary virtues of family devotion, spiritual elevation of women, and upholding traditional sanctity in home life.</p>
+                </div>
+            </div>
+
+            <!-- Chapter 5 -->
+            <div class="artwork-card" data-target-shloka="135">
+                <div class="artwork-image-container">
+                    <span class="artwork-overlay-badge">Chapter 5</span>
+                    <span class="artwork-overlay-verses">Shlokas 135 – 156</span>
+                    <img src="assets/chapter_5.jpg" alt="Chapter 5 Duties of Householders" class="artwork-img">
+                </div>
+                <div class="artwork-content">
+                    <h3>Duties of Householders</h3>
+                    <p>Practical rules for ethical wealth generation, supporting family harmony, charitable contributions, and avoiding debt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Live Shloka Showcase -->
+    <section id="shloka-preview" class="scripture-showcase">
+        <div class="showcase-grid">
+            <div class="shloka-reader-box">
+                <div class="shloka-selector-chips">
+                    <button class="shloka-chip active" data-shloka="1">Shloka 1 (મંગલાચરણ)</button>
+                    <button class="shloka-chip" data-shloka="11">Shloka 11 (અહિંસા)</button>
+                    <button class="shloka-chip" data-shloka="26">Shloka 26 (સત્ય)</button>
+                    <button class="shloka-chip" data-shloka="116">Shloka 116 (ભક્તિ)</button>
+                    <button class="shloka-chip" data-shloka="123">Shloka 123 (આચાર્ય)</button>
+                    <button class="shloka-chip" data-shloka="135">Shloka 135 (ગૃહસ્થ)</button>
+                </div>
+
+                <div class="interactive-lang-tabs" style="margin-bottom: 1.5rem;">
+                    <button class="lang-chip-btn active" data-lang="gu">ગુજરાતી</button>
+                    <button class="lang-chip-btn" data-lang="hi">हिन्दी</button>
+                    <button class="lang-chip-btn" data-lang="en">English</button>
+                </div>
+
+                <h3 class="sacred-title" id="showcaseTitle" style="margin-bottom: 1rem; color: var(--gold-primary);">શિક્ષાપત્રી મંગલાચરણ · Invocation</h3>
+                <p class="sanskrit-text featured-sanskrit" id="showcaseSanskrit">
+                    वामे यस्य स्थिता राधा श्रीश्च यस्यास्ति वक्षसि ।<br>
+                    वृन्दावनविहारं तं श्रीकृष्णं हृदि भावये ॥१॥
+                </p>
+                <p class="featured-translit" id="showcaseTranslit">
+                    vāme yasya sthitā rādhā śrīśca yasyāsti vakṣasi । vṛndāvanavihāraṁ taṁ śrīkṛṣṇaṁ hṛdi bhāvaye ॥1॥
+                </p>
+                <div class="featured-translation" id="showcaseMeaning">
+                    જેમના ડાબી બાજુ રાધાજી બિરાજમાન છે, જેમની છાતીમાં લક્ષ્મીજી નિવાસ કરે છે, અને જેઓ વૃંદાવનમાં વિહાર કરે છે તેવા શ્રીકૃષ્ણ ભગવાનનું હું હૃદયમાં ધ્યાન કરું છું.
+                </div>
+
+                <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+                    <button class="btn-primary-small" id="audioPlayBtn">
+                        <i data-lucide="volume-2"></i>
+                        <span>Listen to Shloka Chant</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="showcase-info">
+                <span class="badge">Authentic Commentary</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.25rem;">Preserving Every Nuance of <span class="text-gold">Bhagwan's Words</span></h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.8rem;">
+                    Written on Vasant Panchami in Vikram Samvat 1882 in Vadtal, Gujarat, the Shikshapatri delivers universal moral codes for peace, family harmony, health, ethical wealth creation, and divine communion with God.
+                </p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary); margin-bottom: 2.2rem;">
+                    <li style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i data-lucide="check-circle-2" class="gold-icon"></i> Retains original Sanskrit Devanagari meter
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i data-lucide="check-circle-2" class="gold-icon"></i> Authentic Gujarati translation blessed by spiritual traditions
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i data-lucide="check-circle-2" class="gold-icon"></i> Clear, contemporary English translation for younger generations
+                    </li>
+                </ul>
+                <a href="#download" class="btn-primary">Explore All 212 Shlokas Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Matching BhaktiQuest) -->
+    <section id="download" class="cta-section">
+        <div class="cta-card glassmorphic">
+            <h2>Ready to start your <span class="text-gold">spiritual journey?</span></h2>
+            <p>Join thousands of devotees on the sacred path of Dharma. Download the Shikshapatri companion app today.</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#download" class="btn-primary large">
+                    <i data-lucide="apple"></i>
+                    Download for iOS
+                </a>
+                <a href="#download" class="btn-secondary" style="padding: 1.1rem 2rem;">
+                    <i data-lucide="play"></i>
+                    Google Play Store
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Matching BhaktiQuest) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-badge" style="width: 32px; height: 32px;">
+                        <img src="assets/app_icon.png" alt="Shikshapatri Logo">
+                    </div>
+                    <span>Shikshapatri</span>
+                </div>
+                <p>An offline-first spiritual companion guiding you on the sacred path of Dharma.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="link-column">
+                    <h4>Support</h4>
+                    <a href="support.html">Support Center &amp; FAQ</a>
+                    <a href="support.html#google-signin">Android Login Fix</a>
+                    <a href="mailto:support@shikshapatri.app">Email Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Shikshapatri Companion. All rights reserved. · ॥ શ્રીહરિઃ જયતિ ॥</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

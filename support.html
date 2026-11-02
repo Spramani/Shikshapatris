@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support & Help Center | Shikshapatri App Companion</title>
+  <meta name="description" content="Get help with the Shikshapatri companion app. Troubleshooting guides for Android Google Sign-In, audio pronunciation, cloud synchronization, and contact support.">
+  <link rel="icon" type="image/png" href="assets/app_icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Sacred Sunburst Rays Background (Matching Mobile Loading Screen) -->
+  <div class="sacred-sunburst-bg" aria-hidden="true"></div>
+
+  <!-- Floating Golden Embers Particle Background -->
+  <canvas id="embersCanvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/app_icon.png" alt="Shikshapatri Logo" class="brand-icon">
+        <div>
+          <span>શિક્ષાપત્રી</span>
+          <span class="brand-badge">Companion</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#shloka-preview">Shloka Reader</a></li>
+        <li><a href="index.html#chapters">Chapters</a></li>
+        <li><a href="support.html" class="active">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        <a href="index.html#download" class="btn btn-primary">
+          <span>Get App</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Support Header -->
+  <header class="section" style="padding-bottom: 2rem;">
+    <div class="container" style="text-align: center;">
+      <div class="sacred-pill">
+        <span>Help & Support</span>
+      </div>
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">How Can We Help You?</h1>
+      <p style="color: var(--text-secondary); font-size: 1.15rem; max-width: 600px; margin: 0 auto;">
+        Browse answers to common questions or reach out directly to our dedicated volunteer development team.
+      </p>
+    </div>
+  </header>
+
+  <!-- Quick Action Support Cards -->
+  <section class="section" style="padding-top: 1rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">🔑</div>
+          <h3>Android Google Sign-In</h3>
+          <p>Troubleshooting steps for resolving <span class="code-pill">ApiException: 10</span> and adding debug SHA-1 fingerprints in Firebase.</p>
+          <a href="#google-signin" class="btn btn-secondary" style="margin-top: 1.25rem; font-size: 0.85rem; padding: 0.5rem 1rem;">View Resolution →</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">☁️</div>
+          <h3>Cloud Sync & Restore</h3>
+          <p>Learn how to synchronize your reading progress, bookmarks, and completion streaks across iOS and Android.</p>
+          <a href="#sync-help" class="btn btn-secondary" style="margin-top: 1.25rem; font-size: 0.85rem; padding: 0.5rem 1rem;">Learn More →</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🔊</div>
+          <h3>Audio & Pronunciation</h3>
+          <p>How to use text-to-speech audio chanting, speed controls, and high-quality voice configuration.</p>
+          <a href="#audio-help" class="btn btn-secondary" style="margin-top: 1.25rem; font-size: 0.85rem; padding: 0.5rem 1rem;">Audio Guide →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section class="section scripture-showcase" id="faqs">
+    <div class="container">
+      <div class="section-header">
+        <div class="sacred-pill">
+          <span>Frequently Asked Questions</span>
+        </div>
+        <h2>Common Inquiries & Guides</h2>
+        <p>Clear, straightforward solutions for all app features and platform setup.</p>
+      </div>
+
+      <div class="faq-list">
+        <!-- Question 1: Android Google Sign-In Error -->
+        <div class="faq-item open" id="google-signin">
+          <button class="faq-question">
+            <span>Why am I getting an error with Google Sign-In on Android?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              On Android, Google Sign-In relies on Google Play Services verifying your app's digital certificate fingerprint against the Firebase Console. If you see <span class="code-pill">ApiException: 10</span> (DEVELOPER_ERROR) or sign-in failure, it indicates that your Android build's SHA-1 fingerprint has not yet been registered in Firebase.
+            </p>
+            <p style="margin-top: 0.8rem; font-weight: 600; color: var(--text-primary);">
+              Steps to resolve in Firebase Console:
+            </p>
+            <ol style="margin-left: 1.5rem; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.4rem;">
+              <li>Go to <a href="https://console.firebase.google.com" target="_blank" style="color: var(--primary); text-decoration: underline;">Firebase Console</a> &gt; select your project <strong>shikshapatri-e8187</strong>.</li>
+              <li>Click on <strong>Project Settings (gear icon)</strong> &gt; scroll down to <strong>Your apps</strong> &gt; select the Android app with package name <span class="code-pill">com.shikshapatri.App</span>.</li>
+              <li>Click <strong>Add fingerprint</strong> and paste your SHA-1 key:
+                <br>
+                <div style="background: rgba(0,0,0,0.06); padding: 0.6rem 0.9rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; margin-top: 0.4rem; user-select: all; color: var(--primary);">
+                  BF:37:35:D6:5C:91:6C:3D:1E:51:93:07:3B:64:1B:CD:AE:94:ED:57
+                </div>
+              </li>
+              <li>Also add the SHA-256 fingerprint:
+                <br>
+                <div style="background: rgba(0,0,0,0.06); padding: 0.6rem 0.9rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; margin-top: 0.4rem; user-select: all; color: var(--gold-dark);">
+                  67:23:80:C5:A7:3B:82:A9:F6:F5:AD:DE:04:BC:0C:60:53:7D:24:2C:BC:74:54:07:2D:0D:CE:88:7D:5E:FE:E5
+                </div>
+              </li>
+              <li>Download the updated <span class="code-pill">google-services.json</span> file and place it in <span class="code-pill">android/app/google-services.json</span>.</li>
+              <li>Clean and rebuild: <span class="code-pill">flutter clean &amp;&amp; flutter run</span>. Google Sign-In will now authenticate seamlessly!</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Question 2: Offline Usage -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Does the app work without an internet connection?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes! All 212 shlokas in Sanskrit Devanagari, English transliteration, Gujarati translation, Hindi commentary, and English meanings are bundled directly into the app using a local SQLite database. You do not need any internet connection to read, bookmark, take notes, or listen to audio chanting.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 3: Cloud Sync -->
+        <div class="faq-item" id="sync-help">
+          <button class="faq-question">
+            <span>How does Cloud Sync work across Android and iOS?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              When you sign in using Google, Apple ID, or Email, your reading milestones, completed shlokas, and custom bookmarks are backed up to secure Cloud Firestore. When you switch to a new phone or tablet, simply sign in with the same account, and your entire spiritual journal is restored automatically.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 4: Audio Chanting -->
+        <div class="faq-item" id="audio-help">
+          <button class="faq-question">
+            <span>How do I adjust audio speed and speech pitch?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Navigate to <strong>Settings &gt; Voice &amp; Pronunciation</strong>. You can choose from built-in voice presets (Calm Meditation, Traditional Chanting, Study Pace) or customize the speech rate, volume, and pitch to your personal preference.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 5: Poster Sharing -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I share shlokas to Instagram Stories or WhatsApp?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              While viewing any shloka, tap the <strong>Share</strong> button at the top right of the card. A sacred poster preview will generate with gold filigree borders. Tap <strong>Share Poster</strong> to open your phone's native share menu, where you can select Instagram Stories, WhatsApp, Facebook, or Save to Photos. You can also tap <strong>Copy</strong> to copy the Sanskrit and translation text directly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 6: Account Deletion -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I delete my account and data?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              You can delete your account and all associated cloud data at any time from within the app by going to <strong>Settings &gt; Account &gt; Delete Account</strong>. You can also email us at <a href="mailto:support@shikshapatri.app" style="color: var(--primary);">support@shikshapatri.app</a> with your registered email ID, and our team will permanently purge your data within 48 hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Contact Form -->
+  <section class="section" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <div class="sacred-pill">
+          <span>Get in Touch</span>
+        </div>
+        <h2 style="font-size: 2.3rem; margin-bottom: 1.25rem;">Contact Support</h2>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+          Have a question, feedback, or suggestion for a new feature? Fill out the form or reach out directly via email. We are committed to making this spiritual companion better for devotees worldwide.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="feature-icon-box" style="margin-bottom: 0; width: 44px; height: 44px; font-size: 1.1rem;">✉️</div>
+            <div>
+              <small style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Direct Email</small>
+              <div style="font-weight: 600; color: var(--text-primary);">support@shikshapatri.app</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="feature-icon-box" style="margin-bottom: 0; width: 44px; height: 44px; font-size: 1.1rem;">⏱️</div>
+            <div>
+              <small style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Response Time</small>
+              <div style="font-weight: 600; color: var(--text-primary);">Within 24 to 48 Hours</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Box -->
+      <div class="contact-card">
+        <form id="supportForm">
+          <div class="form-group">
+            <label for="contactName" class="form-label">Your Name *</label>
+            <input type="text" id="contactName" class="form-input" placeholder="e.g. Anand Patel" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail" class="form-label">Email Address *</label>
+            <input type="email" id="contactEmail" class="form-input" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactTopic" class="form-label">Issue Category</label>
+            <select id="contactTopic" class="form-select">
+              <option value="android-login">Android Google Sign-In Issue</option>
+              <option value="audio">Audio / Speech Pronunciation</option>
+              <option value="sync">Sync &amp; Account Restore</option>
+              <option value="content">Translation / Text Suggestion</option>
+              <option value="feature">New Feature Request</option>
+              <option value="other">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage" class="form-label">Message Details *</label>
+            <textarea id="contactMessage" class="form-textarea" placeholder="Please describe the issue or question in detail..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand" style="margin-bottom: 0.75rem;">
+          <img src="assets/app_icon.png" alt="Shikshapatri Logo" class="brand-icon">
+          <span>શિક્ષાપત્રી</span>
+        </a>
+        <p>A dedicated, advertisement-free spiritual companion app designed for daily contemplation of Bhagwan Swaminarayan's sacred precepts.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#shloka-preview">Live Shloka Reader</a></li>
+          <li><a href="index.html#download">Download App</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="support.html#faqs">FAQs</a></li>
+          <li><a href="support.html#google-signin">Android Login Fix</a></li>
+          <li><a href="support.html#contact">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>© 2026 Shikshapatri Companion. All rights reserved.</div>
+      <div>Jai Swaminarayan · ॥ શ્રીહરિઃ જયતિ ॥</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
